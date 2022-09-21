@@ -1,24 +1,30 @@
 addEventListener("DOMContentLoaded",()=>{
-    console.log(`9. Realizar el algoritmo que lea N números, calcule y escriba la suma de los pares y el producto de los
-    impares. Numero par es aquel que su residuo igual a cero (num mod !=0)`)
+    console.log(`10. Calcular el valor total del valor de 5 productos, el IVA y el subtotal, visualizar los resultados de:
+    Iva, Subtotal y Total de la compra de los artículos.`)
 
-    let cantidad = Number(prompt(`Ingresa la cantidad de numeros que deseas usar: `))
-
-    if(cantidad<=0){
-        console.log(`Tienes que agregar por lo menos un numero positivo!!`)
+    var continuar = `si`
+    while(continuar==`si`){
+        let p1 = Number(prompt(`Ingresa el valor del producto 1: `))
+        let p2 = Number(prompt(`Ingresa el valor del producto 2: `))
+        let p3 = Number(prompt(`Ingresa el valor del producto 3: `))
+        let p4 = Number(prompt(`Ingresa el valor del producto 4: `))
+        let p5 = Number(prompt(`Ingresa el valor del producto 5: `))
+        let valoriva = Number(prompt(`Ingresa el valor del IVA: `))
+        continuar = String(prompt(`Deas continuar? (si/no)`))
+        
+        let suma = (p1+p2+p3+p4+p5)
+        let iva = (suma * valoriva/100)
+        let total = (suma + iva) 
+        console.log(`Valor sin iva ${suma}`)
+        console.log(`IVA ${valoriva}%`)
+        console.log(`Valor del iva ${valoriva} = ${iva}`)
+        console.log(`Valor con iva: ${total}`)
     }
 
+    if(continuar==`no`){
+        console.log(`Gracias por su compra!`)
+    }
     else{
-        var total = 0
-        var pares = 0
-
-        for(i=1;i<=cantidad;i++){
-            let numeros = Number(prompt(`Ingresa el valor ${i}`))
-            if(numeros % 2 ==0){
-                pares +=1 
-                fin= total+numeros
-            }
-        }
-        console.log(`Cantidad de Numeros pares ${pares} , Cantidad de Numeros impares ${cantidad - pares}`)
+        console.log(`Ingreso un dato no valido!`)
     }
 })
