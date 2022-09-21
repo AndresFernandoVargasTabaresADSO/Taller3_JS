@@ -1,15 +1,29 @@
 addEventListener("DOMContentLoaded",()=>{
-    console.log(`5. Escriba un algoritmo que calcule el área de un cuadrado siempre y cuando los lados sean positivos:
-    área triangulo= lado * lado.`)
+    console.log(`6. Considere dos variables llamadas temperatura y presión. Escriba una sentencia if-else que muestre
+    en pantalla la palabra Alarma si la variable presión es mayor a 200 o si la variable temperatura es
+    mayor a 100. En caso contrario, se debe mostrar en pantalla la palabra Normal.`)
 
-    let lado = Number(prompt(`Ingresa el lado del cuadrado: `))
+    let options = String(prompt(`Ingresa una de las Opciones: Temperatura (T) - Presion (P)`))
 
-    if(lado>0){
-        let solucion = lado*lado
-        console.log(`El area de tu cuadrado es: ${solucion}`)
+    if(options==`T`){
+        let temp = Number(prompt(`Ingresa la temperatura: `))
+        if(temp>200){
+            console.log(`Alarma!! La temperatura es mayor a 200!!`)
+        }
+        else{
+            console.log(`La temperatura esta Normal`)
+        }
     }
 
-    else{
-        console.log(`Ingresa un numero positivo!!`)
+    if(options==`P`){
+        let presion= Number(prompt(`Ingresa la presion: `))
+
+        if(presion>100){
+            console.log(`Alarma!! La presion es mayor a 100!!`)
+        }
+
+        else{
+            console.log(`La presion esta Normal`)
+        }
     }
 })
