@@ -1,29 +1,27 @@
 addEventListener("DOMContentLoaded",()=>{
-    console.log(`6. Considere dos variables llamadas temperatura y presión. Escriba una sentencia if-else que muestre
-    en pantalla la palabra Alarma si la variable presión es mayor a 200 o si la variable temperatura es
-    mayor a 100. En caso contrario, se debe mostrar en pantalla la palabra Normal.`)
+    console.log(`7. Calcular todos los pagos hechos de un restaurante y que si el consumo ingresado excede los
+    $130.000 el descuento será del 15%, de lo contrario no hay descuento`)
 
-    let options = String(prompt(`Ingresa una de las Opciones: Temperatura (T) - Presion (P)`))
+    var cont = `si`;
+    var total = 0;
 
-    if(options==`T`){
-        let temp = Number(prompt(`Ingresa la temperatura: `))
-        if(temp>200){
-            console.log(`Alarma!! La temperatura es mayor a 200!!`)
-        }
-        else{
-            console.log(`La temperatura esta Normal`)
-        }
+    while(cont==`si`){
+        pagos = Number(prompt(`Ingresa los pagos: `))
+        total = total + pagos
+        cont = String(prompt(`Deseas agregar mas pagos? (si/no)`))
+        
     }
 
-    if(options==`P`){
-        let presion= Number(prompt(`Ingresa la presion: `))
+    if(total>130000){
+        descuento = total * 0.15
+        destotal = total - descuento
 
-        if(presion>100){
-            console.log(`Alarma!! La presion es mayor a 100!!`)
-        }
+        console.log(`Total: $${total}`)
+        console.log(`Descuento $${descuento}`)
+        console.log(`Presio final: $${destotal}`)
+    }
 
-        else{
-            console.log(`La presion esta Normal`)
-        }
+    else{
+        console.log(`Total: $${total}`)
     }
 })
