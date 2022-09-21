@@ -1,19 +1,24 @@
 addEventListener("DOMContentLoaded",()=>{
-    console.log(`8. En cierta empresa se les paga a sus trabajadores de la siguiente forma: si el empleado es de planta,
-    la hora trabajada se le paga a $20000, si el empleado es administrativo, la hora trabajada se le paga
-    a $10000. Para calcular su pago es necesario conocer el total de horas trabajadas.`)
+    console.log(`9. Realizar el algoritmo que lea N números, calcule y escriba la suma de los pares y el producto de los
+    impares. Numero par es aquel que su residuo igual a cero (num mod !=0)`)
 
-    let cargo = String(prompt(`Ingrese la opcion de su cargo, Opciones Administrativo (A), Planta (P)`))
+    let cantidad = Number(prompt(`Ingresa la cantidad de numeros que deseas usar: `))
 
-    if(cargo==`A`){
-        let temp = Number(prompt(`Ingrese el numero de horas: `))
-        let horas = temp * 10000
-        console.log(`Cargo Administrativo: Su pago es $${horas}`)
+    if(cantidad<=0){
+        console.log(`Tienes que agregar por lo menos un numero positivo!!`)
     }
 
-    if(cargo==`P`){
-        let temp = Number(prompt(`Ingrese el numero de horas: `))
-        let horas = temp * 20000
-        console.log(`Cargo Planta: Su pago es $${horas}`)
+    else{
+        var total = 0
+        var pares = 0
+
+        for(i=1;i<=cantidad;i++){
+            let numeros = Number(prompt(`Ingresa el valor ${i}`))
+            if(numeros % 2 ==0){
+                pares +=1 
+                fin= total+numeros
+            }
+        }
+        console.log(`Cantidad de Numeros pares ${pares} , Cantidad de Numeros impares ${cantidad - pares}`)
     }
 })
