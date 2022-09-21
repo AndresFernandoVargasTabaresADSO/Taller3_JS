@@ -1,47 +1,23 @@
 addEventListener("DOMContentLoaded",()=>{
-    console.log(`3. Desarrollar un diagrama que lea 3 valores diferentes e indique cual es el mayor de ellos, el menor o
-    si son iguales.`)
-    
-    let number = Number(prompt(`Escribe el primer numero: `))
-    let numbertwo = Number(prompt(`Escribe un segundo numero: `))
-    let numbertre = Number(prompt(`Escribe el tercer numero: `))
+    console.log(`4. Cálculo de áreas - Elige una figura geométrica:" Triángulo y Círculo
+    ¿Qué figura quiere calcular (Escriba T o C)?
+    Triangulo = base * altura / 2
+    Circulo = PI * radio* radio`)
+   
+    let options = String(prompt(`Ingresa la Opcion de la figura que deas usar, Opciones: Trianguno (T) - Circulo (C): `))
 
-    if(number==numbertwo|number==numbertre|numbertwo==numbertre|numbertwo==number){
-        if(numbertwo==number){
-            console.log(`El primer numero es igual: ${numbertwo} Es igual al segundo numero: ${number}`)
-        }
+    if(options==`T`){
+        let base = Number(prompt(`Ingresa la base de tu triangulo: `))
+        let altura = Number(prompt(`Ingresa la altura de tu triangulo: `))
 
-        if(numbertre==number){
-            console.log(`El primer numero:${numbertre} Es igual al tercer numero ${number}`)
-        }
-
-        if(numbertwo==numbertre){
-            console.log(`El segundo numero:${numbertre} Es igual al tercer numero ${number}`)
-        }
+        let solucion = (base * altura)/2
+        console.log(`El area de tu triangulo es: ${solucion}`)
     }
 
-    if(number<numbertwo&numbertre<numbertwo){
-        console.log(`${numbertwo} Es mayor que ${number} y ${numbertre}`)
+    else{
+        let radio = Number(prompt(`Ingresa el radio de tu circulo: `))
+
+        let solucion = (Math.PI * Math.pow(radio,2))
+        console.log(`El area de tu circuferencia es: ${solucion}`)
     }
-        
-    if(numbertwo<number&numbertre<number){
-        console.log(`${number} Es mayor que ${numbertwo} y ${numbertre}`)
-    }
-        
-    if(number<numbertre&numbertwo<numbertre){
-        console.log(`${numbertre} Es mayor que ${number} y ${numbertwo}`)
-    }
-        
-    if(number>numbertwo&numbertre>numbertwo){
-        console.log(`${numbertwo} Es menor que ${number} y ${numbertre}`)
-    }
-        
-    if(numbertwo>number&numbertre>number){
-        console.log(`${number} Es menor que ${numbertwo} y ${numbertre}`)
-    }
-        
-    if(number>numbertre&numbertwo>numbertre){
-        console.log(`${numbertre} Es menor que ${number} y ${numbertwo}`)
-    }
-    
 })
