@@ -1,27 +1,19 @@
 addEventListener("DOMContentLoaded",()=>{
-    console.log(`7. Calcular todos los pagos hechos de un restaurante y que si el consumo ingresado excede los
-    $130.000 el descuento será del 15%, de lo contrario no hay descuento`)
+    console.log(`8. En cierta empresa se les paga a sus trabajadores de la siguiente forma: si el empleado es de planta,
+    la hora trabajada se le paga a $20000, si el empleado es administrativo, la hora trabajada se le paga
+    a $10000. Para calcular su pago es necesario conocer el total de horas trabajadas.`)
 
-    var cont = `si`;
-    var total = 0;
+    let cargo = String(prompt(`Ingrese la opcion de su cargo, Opciones Administrativo (A), Planta (P)`))
 
-    while(cont==`si`){
-        pagos = Number(prompt(`Ingresa los pagos: `))
-        total = total + pagos
-        cont = String(prompt(`Deseas agregar mas pagos? (si/no)`))
-        
+    if(cargo==`A`){
+        let temp = Number(prompt(`Ingrese el numero de horas: `))
+        let horas = temp * 10000
+        console.log(`Cargo Administrativo: Su pago es $${horas}`)
     }
 
-    if(total>130000){
-        descuento = total * 0.15
-        destotal = total - descuento
-
-        console.log(`Total: $${total}`)
-        console.log(`Descuento $${descuento}`)
-        console.log(`Presio final: $${destotal}`)
-    }
-
-    else{
-        console.log(`Total: $${total}`)
+    if(cargo==`P`){
+        let temp = Number(prompt(`Ingrese el numero de horas: `))
+        let horas = temp * 20000
+        console.log(`Cargo Planta: Su pago es $${horas}`)
     }
 })
